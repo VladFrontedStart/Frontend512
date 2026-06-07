@@ -64,7 +64,7 @@ td {
     width: 220px;
 } */
 
-* {
+/* * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -116,4 +116,9 @@ body {
 .pagination__item--active {
     font-weight: 800;
     color: gold;
+} */
+
+input.invalid {
+    border: 2px solid red;
+    outline: none;
 }

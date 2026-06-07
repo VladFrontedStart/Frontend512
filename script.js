@@ -3757,4 +3757,108 @@ let regexp = /шаблон/флаги;
 // printSquare(5);
 
 // console.log("Вносим изменения")
-console.log("Вносим изменения на другом рабочем месте")
+// console.log("Вносим изменения на другом рабочем месте")
+
+let registrationForm = document.getElementById("registrationForm")
+let errorMessages = document.getElementById("errorMessages");
+
+registrationForm.addEventListener("input", function (event) {
+    event.preventDefault();
+
+    let [username, email, password] = registrationForm.elements;
+    errorMessages.innerHTML = "";
+    username.classList.toggle('invalid', !username.value.trim());
+    email.classList.toggle('invalid', !email.value.trim() || !isValidEmail(email.value));
+    password.classList.toggle('invalid', !password.value.trim() || !isStrongPassword(password.value));
+    console.log(username, email, password);
+    if (!username.value.trim()) {
+
+        displayError("Имя пользователя обязательно");
+        return
+    }
+    if (!email.value.trim() || !isValidEmail(email.value)) {
+
+        displayError("Введите адрес электронной почты");
+
+        return
+    }
+    if (!password.value.trim() || !isStrongPassword(password.value)) {
+        displayError("Пароль должен состоять как минимум из 8 символов и как минимум одну заглавную букву, одну строчку букву,одну цифру и специальный символ");
+    }
+
+})
+
+function displayError(message) {
+    errorMessages.innerHTML += `<div class='error'>${message}</div>`;
+}
+
+function isValidEmail(email) {
+    return /^[\w.%+-]+@[a-z0-99.-]+.[a-z]{2,}$/i.test(email);
+
+}
+
+function isStrongPassword(password) {
+    return /^(?=.*\d)(?=.*[A-Z]).{8,}$/.test(password);
+}
+
+// let mas = [1, 2];
+
+// let obj = {
+//     one: 1, two: 2;
+//     console.log()
+// }
+
+// let car = new Object();
+// let car1 = {};
+
+
+// console.log(car);
+// console.log(car1);
+
+// let car = new Object();
+// car["type"] = "BMW";
+// car["color"] = "white";
+
+// console.log(car);
+// alert(car);
+
+
+// let car1 = new Object();
+// car1.type = "BMW";
+// car1.color = "black";
+// document.writeln(car1.type + " " + car1.color);
+
+// let menu1 = {};
+// menu1.width = 300;
+// menu1.height = 200;
+// menu1.title = "Menu";
+// console.log(menu1);
+// document.writeln(menu1.title + ": " + menu1.width + " x " + menu1.height + "<br>");
+
+// let menu = {
+//     width: 300,
+//     heigth: 200,
+//     title: "Menu",
+// };
+
+// console.log(menu);
+// document.writeln(menu.title + ": " + menu.width + " x " + menu.height + "<br>");
+
+
+// console.log("heigth" in menu);
+
+// let counter = 0;
+// for (let key in menu) {
+//     document.writeln("<br>Ключ = " + key + ", значение =" + menu[key]);
+//     counter++;
+// }
+
+// document.writeln("<br><br>Всешл свойств: " + counter + "<br>");
+// document.writeln("<br><br>Имена ключей: " + Object.keys(menu) +
+//     "<br>");
+
+// Object.keys(menu).forEach(function (key) {
+//     document.writeln("<br>" + menu[key]);
+// })
+
+
