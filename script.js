@@ -3731,3 +3731,29 @@ let regexp = /шаблон/флаги;
 // console.log(">" + st + "<");
 
 // let
+
+// function printSquare(lines) {
+//     if (lines < 2 || !Number.isInteger(lines)) {
+//         return;
+//     }
+//     let square = "";
+//     for (let row = 0; row < lines; row++) {
+
+//         for (let col = 0; col < lines; col++) {
+//             if (row === 0 || row === lines - 1 || col === 0 || col === lines - 1) {
+//                 square += "# ";
+//             } else {
+//                 square += "  ";
+//             }
+
+//         }
+//         square = square.trim();
+//         square += "\n"
+//     }
+//     console.log(square)
+
+// }
+
+// printSquare(5);
+
+console.log("Вносим изменения")
