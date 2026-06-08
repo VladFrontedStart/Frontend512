@@ -3759,47 +3759,47 @@ let regexp = /шаблон/флаги;
 // console.log("Вносим изменения")
 // console.log("Вносим изменения на другом рабочем месте")
 
-let registrationForm = document.getElementById("registrationForm")
-let errorMessages = document.getElementById("errorMessages");
+// let registrationForm = document.getElementById("registrationForm")
+// let errorMessages = document.getElementById("errorMessages");
 
-registrationForm.addEventListener("input", function (event) {
-    event.preventDefault();
+// registrationForm.addEventListener("input", function (event) {
+//     event.preventDefault();
 
-    let [username, email, password] = registrationForm.elements;
-    errorMessages.innerHTML = "";
-    username.classList.toggle('invalid', !username.value.trim());
-    email.classList.toggle('invalid', !email.value.trim() || !isValidEmail(email.value));
-    password.classList.toggle('invalid', !password.value.trim() || !isStrongPassword(password.value));
-    console.log(username, email, password);
-    if (!username.value.trim()) {
+//     let [username, email, password] = registrationForm.elements;
+//     errorMessages.innerHTML = "";
+//     username.classList.toggle('invalid', !username.value.trim());
+//     email.classList.toggle('invalid', !email.value.trim() || !isValidEmail(email.value));
+//     password.classList.toggle('invalid', !password.value.trim() || !isStrongPassword(password.value));
+//     console.log(username, email, password);
+//     if (!username.value.trim()) {
 
-        displayError("Имя пользователя обязательно");
-        return
-    }
-    if (!email.value.trim() || !isValidEmail(email.value)) {
+//         displayError("Имя пользователя обязательно");
+//         return
+//     }
+//     if (!email.value.trim() || !isValidEmail(email.value)) {
 
-        displayError("Введите адрес электронной почты");
+//         displayError("Введите адрес электронной почты");
 
-        return
-    }
-    if (!password.value.trim() || !isStrongPassword(password.value)) {
-        displayError("Пароль должен состоять как минимум из 8 символов и как минимум одну заглавную букву, одну строчку букву,одну цифру и специальный символ");
-    }
+//         return
+//     }
+//     if (!password.value.trim() || !isStrongPassword(password.value)) {
+//         displayError("Пароль должен состоять как минимум из 8 символов и как минимум одну заглавную букву, одну строчку букву,одну цифру и специальный символ");
+//     }
 
-})
+// })
 
-function displayError(message) {
-    errorMessages.innerHTML += `<div class='error'>${message}</div>`;
-}
+// function displayError(message) {
+//     errorMessages.innerHTML += `<div class='error'>${message}</div>`;
+// }
 
-function isValidEmail(email) {
-    return /^[\w.%+-]+@[a-z0-99.-]+.[a-z]{2,}$/i.test(email);
+// function isValidEmail(email) {
+//     return /^[\w.%+-]+@[a-z0-99.-]+.[a-z]{2,}$/i.test(email);
 
-}
+// }
 
-function isStrongPassword(password) {
-    return /^(?=.*\d)(?=.*[A-Z]).{8,}$/.test(password);
-}
+// function isStrongPassword(password) {
+//     return /^(?=.*\d)(?=.*[A-Z]).{8,}$/.test(password);
+// }
 
 // let mas = [1, 2];
 
@@ -3862,3 +3862,6 @@ function isStrongPassword(password) {
 // })
 
 
+let st = "-1.5 0 2 -123.4."
+let reg = /-?\d+(?:\.\d+)?/g;
+document.writeln(st.match(reg)); // -1.5,0,2,-123.4
