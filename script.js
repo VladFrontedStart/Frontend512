@@ -3862,6 +3862,67 @@ let regexp = /шаблон/флаги;
 // })
 
 
-let st = "-1.5 0 2 -123.4."
-let reg = /-?\d+(?:\.\d+)?/g;
-document.writeln(st.match(reg)); // -1.5,0,2,-123.4
+// let st = "-1.5 0 2 -123.4."
+// let reg = /-?\d+(?:\.\d+)?/g;
+// document.writeln(st.match(reg)); // -1.5,0,2,-123.4
+
+// function getNearestToMax(arr) {
+//     const max = Math.max(...arr);
+//     const result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] >= max * 0.9 && arr[i] !== max) {
+//             result.push(arr[i]);
+//         }
+//     }
+//     return result
+// }
+
+// console.log(getNearestToMax([5, 88, 95, 100, 77, 21, 92])); // [95, 92]
+// console.log(getNearestToMax([2, 13, 95, 29, 19, 5, -5])); // []
+
+// const randomShuffle = (arr) => {
+//     arr.sort(() => Math.random() - 0.5);
+// };
+
+// const myArr = [1, 2, 3, 4, 5];
+// randomShuffle(myArr);
+
+// // тот же массив, с теми же значениями, в случайном порядке 
+// console.log(myArr);
+
+
+// function validParentheses(str) {
+//     let count = 0
+//     for (let char of str) {
+//         if (char === "(") {
+//             count++;
+//         } else if (char === ")") {
+//             count--;
+//             if (count < 0) {
+//                 return false
+//             }
+
+//         }
+//     }
+//     return count === 0;
+// }
+
+// console.log(validParentheses("(Привет)")); // true
+// console.log(validParentheses("(Привет)оп-па!)")); // false
+// console.log(validParentheses("(ку))ку(")); // false
+
+
+let but = document.querySelector("#but");
+but.addEventListener("click", smsUser);
+
+function smsUser() {
+    let name = document.querySelector("#your_name").value;
+    let text = document.querySelector("#text").value;
+    let regExpBBMail = /(.*?)<(b|u|i|s|h1|p)>(.*?)<(\/\2)>(.*?)/ig;
+    text = text.replace(regExpBBMail, "$1 <span style='color:red'>&lt;$2&gt;</span>$3<span style='color:red'>&lt;$4&gt;</span>$5")
+    let form = document.querySelector("form");
+    form.insertAdjacentHTML("afterend", `<fieldset>
+             <legend>${name}</legend>
+             <div>${text}</div>
+         </fieldset>  `);
+}
