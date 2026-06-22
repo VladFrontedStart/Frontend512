@@ -3247,7 +3247,7 @@ func(параметры);
 // let languageOptions = ["Python", "Javascript", "C++", "Java"];
 
 // languages.innerHTML = languageOptions.map(language => `
-//     <div> 
+//     <div>
 //         <input type="radio" name="language" value="${language}" id="${language}">
 //    <label for = "${language}">${language}</label>
 //         </div>
@@ -3278,7 +3278,7 @@ select.selectedIndex - номер (index) выбранного <option>
 //  let cities = city.selectedIndex;
 //  let options = city.options
 //  let code = options[cities].value
-//  console.log(code)   
+//  console.log(code)
 //  let div = document.querySelector("#image");
 //  div.innerHTML = "<img src='"+code+".png'>"
 // }
@@ -3423,11 +3423,11 @@ search - возвращает позицию, на которой регуляр
 
 match - получит  все совпдаения с регулярным выражением
 
-replace - поиск и замена 
+replace - поиск и замена
 
-split - делит строку на массив, разбивая ее по указанной подстроке 
+split - делит строку на массив, разбивая ее по указанной подстроке
 
-test - выполняет поиск совпадения регулярного выражения со строкой. Возвращает 
+test - выполняет поиск совпадения регулярного выражения со строкой. Возвращает
 true или false
 
 [^abc] - исключающий диапозон, ни один из указанных символов
@@ -3480,9 +3480,9 @@ let regexp = /шаблон/флаги;
 
 
 /*
-\D - все кроме цифры 
-\S - Не проблем 
-\W 
+\D - все кроме цифры
+\S - Не проблем
+\W
 */
 
 // let str = "я ищу сопадения 49589458 хзапхзвап"
@@ -3505,7 +3505,7 @@ let regexp = /шаблон/флаги;
 /* Количество повторений
 + => от 1 до бесконечности {1,}
 ? => от 0 до 1 {0,1}
-* => от 0 до бесконечности{0,} 
+* => от 0 до бесконечности{0,}
 
 */
 
@@ -3693,7 +3693,7 @@ let regexp = /шаблон/флаги;
 // let re = /["'](.*?)["']/g;
 // document.writeln(st.match(re) + "<br>");
 
-//Позитивная опережающая проверка 
+//Позитивная опережающая проверка
 // X(?=Y)
 
 // document.writeln("Hello, Error".match(/^(?=.*[eE][rR][rR][oO][rR]).{1,50}$/));
@@ -3714,7 +3714,7 @@ let regexp = /шаблон/флаги;
 //     let regExpBBMail = /([\w.]+@[0-9a-z_^.]+\.[a-z]{2,3})/ig;
 //     text = text.replace(regExpBBMail, "<span style = color:red'>$1</span>")
 //     document.writeln(`
-//         <fieldset> 
+//         <fieldset>
 //         <legend>${name}</legend>
 //         <div>${text}{/div>}
 //         </fieldset>
@@ -3887,7 +3887,7 @@ let regexp = /шаблон/флаги;
 // const myArr = [1, 2, 3, 4, 5];
 // randomShuffle(myArr);
 
-// // тот же массив, с теми же значениями, в случайном порядке 
+// // тот же массив, с теми же значениями, в случайном порядке
 // console.log(myArr);
 
 
@@ -3912,17 +3912,505 @@ let regexp = /шаблон/флаги;
 // console.log(validParentheses("(ку))ку(")); // false
 
 
-let but = document.querySelector("#but");
-but.addEventListener("click", smsUser);
+// let but = document.querySelector("#but");
+// but.addEventListener("click", smsUser);
 
-function smsUser() {
-    let name = document.querySelector("#your_name").value;
-    let text = document.querySelector("#text").value;
-    let regExpBBMail = /(.*?)<(b|u|i|s|h1|p)>(.*?)<(\/\2)>(.*?)/ig;
-    text = text.replace(regExpBBMail, "$1 <span style='color:red'>&lt;$2&gt;</span>$3<span style='color:red'>&lt;$4&gt;</span>$5")
-    let form = document.querySelector("form");
-    form.insertAdjacentHTML("afterend", `<fieldset>
-             <legend>${name}</legend>
-             <div>${text}</div>
-         </fieldset>  `);
-}
+// function smsUser() {
+//     let name = document.querySelector("#your_name").value;
+//     let text = document.querySelector("#text").value;
+//     let regExpBBMail = /(.*?)<(b|u|i|s|h1|p)>(.*?)<(\/\2)>(.*?)/ig;
+//     text = text.replace(regExpBBMail, "$1 <span style='color:red'>&lt;$2&gt;</span>$3<span style='color:red'>&lt;$4&gt;</span>$5")
+//     let form = document.querySelector("form");
+//     form.insertAdjacentHTML("afterend", `<fieldset>
+//              <legend>${name}</legend>
+//              <div>${text}</div>
+//          </fieldset>  `);
+// }
+
+// const language = {
+//     name: "JavaScript",
+// };
+
+// const anotherKey = "createdAt";
+// const anotherValue = 1995;
+
+// language.anotheryKey = anotherValue;
+
+// let area = document.getElementById("area");
+// let curentPlayer = document.getElementById("curPlayer");
+
+
+
+// let player = "x";
+// let stat = {
+//     'x': 0,
+//     'o': 0,
+//     'd': 0,
+// }
+
+// let winIndex = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [1, 4, 7],
+//     [2, 5, 8],
+//     [3, 6, 9],
+//     [1, 5, 9],
+//     [3, 5, 7]
+// ]
+// for (let i = 1; i <= 9; i++) {
+//     area.innerHTML += "<div class='cell' data-pos='" + i + "'>"
+
+// }
+// let cell = document.querySelectorAll(".cell")
+// for (let i = 0; i < cell.length; i++) {
+//     cell[i].addEventListener("click", cellClick);
+// }
+
+// function cellClick() {
+//     let data = [];
+//     if (!this.innerHTML) {
+//         this.innerHTML = player;
+//     } else {
+//         alert("Ячейка занята");
+//         return;
+//     }
+
+//     console.log(cell);
+//     for (let i in cell) {
+//         if (cell[i].innerHTML == player) {
+//             data.push(cell[i].getAttribute("data-pos"));
+//         }
+//     }
+//     if (checkWin(data)) {
+//         stat[player] += 1;
+//         restart("Выиграл: " + player);
+//         return;
+//     } else {
+//         let draw = true;
+//         for (let i in cell) {
+//             if (cell[i].innerHTML == "") {
+//                 draw = false;
+
+//             }
+//         }
+//         if (draw) {
+//             stat.d += 1;
+//             restart("Ничья");
+//             return;
+//         }
+//     }
+//     player = player == 'x' ? "o" : "x";
+//     curentPlayer.innerHTML = player.toUpperCase();
+//     console.log(data);
+// }
+
+// function checkWin(data) {
+//     for (let i in winIndex) {
+//         let win = true;
+//         for (let j in winIndex[i]) {
+//             let id = String(winIndex[i][j]);
+//             let ind = data.indexOf(id);
+//             if (ind == -1) {
+//                 win = false;
+//             }
+//         }
+//         if (win) {
+//             return true;
+//         }
+
+//     }
+
+
+//     return false;
+// }
+
+// function restart(text) {
+//     alert(text);
+//     for (let i = 0; i < cell.length; i++) {
+//         cell[i].innerHTML = "";
+
+//     }
+//     updateStat();
+// }
+
+// function updateStat() {
+//     document.getElementById("sX").innerHTML = stat.x;
+//     document.getElementById("sO").innerHTML = stat.o;
+//     document.getElementById("sD").innerHTML = stat.d;
+// }
+// let car = {
+//     name: "Volvo",
+//     year: 2019,
+//     colors: {
+//         first: "yellow",
+//         second: "blue"
+//     },
+//     color: [
+//         "black",
+//         "white",
+//         "red",
+//         "blue"
+//     ],
+//     hello: function () {
+//         document.writeln("Привет<br>");
+//     }
+// }
+
+// console.log(car);
+// console.log(car.hello())
+// document.writeln(car.name)
+
+// // let fill = car.color.filter(function (elem) {
+// //     return elem.length < 5;
+// // });
+
+// document.writeln(fill + "<br>");
+
+// let mas = car.color.map(function (elem, index, all) {
+//     return index + ") " + elem + " массив: " + all + "<br>";
+// })
+// document.writeln("" + mas + "<br>")
+
+// let mas1 = car.color.map(elem => elem.toUpperCase());
+// document.writeln("<br>" + mas1 + "<br>")
+
+// let mas2 = car.color.map(function (elem) {
+//     return elem;
+// })
+
+// document.writeln("<br>" + mas2 + "<br>")
+
+// let calc = {
+//     num1: 5,
+//     num2: 6,
+//     calculate: function () {
+//         console.log(num1);
+//     }
+// }
+
+
+// calc.calculate();
+
+
+// let x = 15, y = 10;
+// let coords = {
+//     x: x,
+//     y: y,
+//     calcSq: function () {
+//         document.writeln(this.x * this.y);
+
+//     }
+// }
+
+// coords.calcSq();
+
+// let user = {
+//     login: 'client',
+//     psw: 'qwerty',
+//     role: 'guest'
+// }
+
+//Функция-конструктор
+//ООП
+
+// function Car(n, year) {
+//     this.name = n;
+//     this.year = year;
+
+// }
+
+// Car.prototype.getAge = function () {
+//     return new Date().getFullYear() - this.year;
+// }
+
+// Car.prototype.color = "black";
+
+// let ford = new Car('Ford', 2019);
+// console.log(ford);
+// console.log(ford.getAge());
+// ford.color = "red";
+// console.log(ford.color);
+
+
+// let bmw = new Car('BMW', 2017);
+// console.log(bmw);
+// console.log(bmw.getAge());
+
+
+// function User(pName, pAge) {
+//     this.name = pName;
+//     this.age = pAge;
+//     this.displayInfo = function () {
+//         document.writeln("Имя: " + this.name + "; возраст: " + this.age + "<br>");
+
+//     }
+// }
+
+
+// let tom = new User("Tom", 26)
+// tom.displayInfo()
+
+
+// let form = document.form1;
+// form.addEventListener("submit", event => {
+//     event.preventDefault();
+
+//     let title = form.title.value;
+//     let text = form.text.value;
+//     let description = form.description.value;
+
+//     // console.log(title, text);
+//     saveForm({ title, text, description });
+// })
+
+// function saveForm(obj) {
+//     let formData = {
+//         date: new Date().toLocaleDateString(),
+//         ...obj
+//     }
+//     console.log("Form data: ", formData);
+// }
+
+
+// let cardsArray = [
+//     { name: 'card1', img: 'c0.gif' },
+//     { name: 'card2', img: 'c1.gif' },
+//     { name: 'card3', img: 'c2.gif' },
+//     { name: 'card4', img: 'c3.gif' },
+//     { name: 'card5', img: 'c4.gif' },
+//     { name: 'card6', img: 'c5.gif' },
+//     { name: 'card7', img: 'c6.gif' },
+//     { name: 'card8', img: 'c7.gif' }
+// ];
+
+// let firstCard = null;
+// let secondCard = null;
+// let lockBoard = false;
+
+// function createBoard() {
+//     let gameBoard = document.querySelector(".game-board");
+//     let shuffledCards = [...cardsArray, ...cardsArray].sort(() => 0.5 - Math.random());
+
+//     shuffledCards.forEach(card => {
+//         let cardElement = document.createElement("div");
+//         cardElement.classList.add("card");
+//         cardElement.dataset.name = card.name;
+//         let cardImage = document.createElement("img");
+//         cardImage.src = card.img;
+//         cardElement.append(cardImage);
+
+//         cardElement.addEventListener('click', flipCard);
+//         gameBoard.append(cardElement);
+//     })
+
+// }
+
+// function flipCard() {
+//     if (lockBoard) {
+//         return;
+//     }
+//     if (this === firstCard) {
+//         return;
+//     }
+//     this.classList.add("flipper");
+//     if (!firstCard) {
+//         firstCard = this;
+//         return;
+//     }
+//     secondCard = this;
+//     checkForMatch();
+// }
+// function checkForMatch() {
+//     if (firstCard.dataset.name === secondCard.dataset.name) {
+//         disabledCard();
+//     } else {
+//         unflipCards();
+//     }
+// }
+
+// function disabledCard() {
+//     firstCard.removeEventListener("click", flipCard);
+//     secondCard.removeEventListener("click", flipCard);
+//     resetBoar();
+// }
+
+// function unflipCards() {
+//     lockBoard = true;
+//     setTimeout(() => {
+//         firstCard.classList.remove("flipper");
+//         secondCard.classList.remove("flipper");
+//         resetBoar();
+
+//     }, 1000);
+// }
+
+// createBoard();
+
+// function resetBoar() {
+//     [firstCard, secondCard, lockBoard] = [null, null, null];
+// }
+
+// function cakes(reciepe, ingredients) {
+//     let mafins = Infinity;
+//     for (let key in recipe) {
+//         if (!ingredients.hasOwnProperty(key) || ingrideints[key] <
+//             recipe[key]) {
+//             return 0
+//         } else {
+//             mafins = Math.min(mafins, Math.floor(
+//                 ingrideints[key] / recipe[key]));
+//         }
+//     }
+//     return mafins;
+// }
+
+
+// Cоздайте объект robot со следующими свойствами:
+
+// plants — массив строк, представляющих растения на грядке, со значением ["морковь", "помидор", "картофель"].
+// waterLevel — уровень воды в баке робота (число от 0 до 100), со значением 100.
+// Реализуйте два метода:
+
+// waterPlants() — метод, который уменьшает уровень воды на 10 единиц за каждое растение на грядке и выводит сообщение: Все растения политы.
+// Если воды не хватает на поливку всех растений, тогда робот ничего не поливает, но выводит сообщение: Не хватает воды, пополните бак!.
+// refillWater() — метод, который полностью заполняет бак робота (устанавливает waterLevel в 100) и выводит сообщение: Бак с водой пополнен.
+
+
+// const personData = [["name", "Сергей"], ["age", 37]];
+// console.log(personData);
+// const person = Object.fromEntries(personData);
+// console.log(person);
+
+
+
+// const first = null;
+// const second = { name: "Bob" };
+
+
+// function printName(person) {
+//     console.log(person.name);
+// }
+
+// printName(second);
+// printName(first);
+
+// const first = null;
+// const second = {
+//     name: "Bob",
+//     sayHi() {
+//         console.log(`Hi! I am ${this.name}`);
+//     }
+// }
+
+// function printName(person) {
+//     console.log(person?.name);
+// }
+
+// printName(second);
+// printName(first);
+
+// second.sayHi();
+
+// Контекст
+
+// let person = {
+//     age: 24,
+//     name: "Irina",
+//     job: "Programmer",
+//     displayInfo: function () {
+//         console.log("name:", this.name);
+//         console.log("age", this.age);
+//         console.log("job", this.job);
+
+//     }
+// }
+
+// person.displayInfo();
+
+// let person = {
+//     age: 24,
+//     name: "Irina",
+//     job: "Programmer",
+//     displayInfo: function (ms) {
+//         console.log(this)
+//         setTimeout(() => {
+//             console.log("name:", this.name);
+//             console.log("age", this.age);
+//             console.log("job", this.job);
+//         }, ms);
+
+
+//     }
+// }
+
+// person.displayInfo(2000);
+
+
+// let modal = document.querySelector("#modal");
+
+// document.querySelector("#btn").addEventListener("click", function () {
+//     modal.style.display = "block";
+// })
+
+// document.querySelector(".close").addEventListener("click", function () {
+//     modal.style.display = "none";
+// })
+
+// window.addEventListener("click", function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+
+// })
+
+// let w = document.documentElement.clientWidth;
+// let h = document.documentElement.clientHeight;
+
+
+// document.querySelector("#window").innerHTML = "Ширина окна: " + w + ", высота окна: " + h;
+
+
+
+// let width = box.clientWidth;
+// let height = box.clientHeight;
+
+
+// let box = document.querySelector(".box");
+
+// let width = box.scrollWidth;
+// let height = box.scrollHeight;
+
+
+// let hh = box.offsetHeight;
+// let flag;
+
+
+// document.querySelector("button").addEventListener("click", function () {
+//     if (!flag) {
+//         box.style.overflow = "hidden";
+//     } else {
+//         box.style.overflow = "";
+//     }
+//     flag = !flag;
+
+
+// })
+
+// let open = document.querySelector("#show");
+// open.addEventListener("click", function () {
+//     // window.open("https://yandex.com")
+//     window.open("str.html", "new_window")
+// });
+
+const nazvanie = {
+  name: "Игорь",
+  colors: ["красный", "синий", "черный", "белый", "желтый"],
+  carBrand: "Bentley",
+  announceWin() {
+    const randomIndex = Math.floor(Math.random() * this.colors.length); 
+    const randomColor = this.colors[randomIndex];  
+    console.log(`${this.name} выиграл ${randomColor} ${this.carBrand}`);
+  }
+};
+nazvanie.announceWin();
