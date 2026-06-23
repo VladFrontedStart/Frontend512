@@ -4403,14 +4403,45 @@ let regexp = /шаблон/флаги;
 //     window.open("str.html", "new_window")
 // });
 
-const nazvanie = {
-  name: "Игорь",
-  colors: ["красный", "синий", "черный", "белый", "желтый"],
-  carBrand: "Bentley",
-  announceWin() {
-    const randomIndex = Math.floor(Math.random() * this.colors.length); 
-    const randomColor = this.colors[randomIndex];  
-    console.log(`${this.name} выиграл ${randomColor} ${this.carBrand}`);
-  }
-};
-nazvanie.announceWin();
+// const nazvanie = {
+//   name: "Игорь",
+//   colors: ["красный", "синий", "черный", "белый", "желтый"],
+//   carBrand: "Bentley",
+//   announceWin() {
+//     const randomIndex = Math.floor(Math.random() * this.colors.length); 
+//     const randomColor = this.colors[randomIndex];  
+//     console.log(`${this.name} выиграл ${randomColor} ${this.carBrand}`);
+//   }
+// };
+// nazvanie.announceWin();
+
+function Automobile(manufact, model, year, color) {
+    this.manufact = manufact;
+    this.model = model;
+    this.year = year;
+    this.color = color;
+
+    this.whatColor = function () {
+        document.writeln("Цвет машины: " + this.color + "<br>");
+    }
+
+    this.autoInfo = function () {
+        document.writeln("Модель: " + this.manufact + " " + this.model + "<br>");
+        document.writeln("Год выпуска: " + this.year + "<br>");
+        document.writeln("Производитель: " + this.manufact + "<br><br>");
+    }
+
+
+}
+
+let nissan = new Automobile("Nissan", "Skyline", 2007, "Red");
+let toyota = new Automobile("Toyota", "Corolla", 2009, "Black");
+let volk = new Automobile("Volkswagen", "Golf", 2009, "Blue");
+
+
+nissan.whatColor()
+nissan.autoInfo()
+toyota.whatColor()
+toyota.autoInfo()
+volk.whatColor()
+volk.autoInfo()
