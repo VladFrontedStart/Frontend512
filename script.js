@@ -4408,40 +4408,204 @@ let regexp = /шаблон/флаги;
 //   colors: ["красный", "синий", "черный", "белый", "желтый"],
 //   carBrand: "Bentley",
 //   announceWin() {
-//     const randomIndex = Math.floor(Math.random() * this.colors.length); 
-//     const randomColor = this.colors[randomIndex];  
+//     const randomIndex = Math.floor(Math.random() * this.colors.length);
+//     const randomColor = this.colors[randomIndex];
 //     console.log(`${this.name} выиграл ${randomColor} ${this.carBrand}`);
 //   }
 // };
 // nazvanie.announceWin();
 
-function Automobile(manufact, model, year, color) {
-    this.manufact = manufact;
-    this.model = model;
-    this.year = year;
-    this.color = color;
+// function Automobile(manufact, model, year, color) {
+//     this.manufact = manufact;
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
 
-    this.whatColor = function () {
-        document.writeln("Цвет машины: " + this.color + "<br>");
-    }
+//     this.whatColor = function () {
+//         document.writeln("Цвет машины: " + this.color + "<br>");
+//     }
 
-    this.autoInfo = function () {
-        document.writeln("Модель: " + this.manufact + " " + this.model + "<br>");
-        document.writeln("Год выпуска: " + this.year + "<br>");
-        document.writeln("Производитель: " + this.manufact + "<br><br>");
-    }
+//     this.autoInfo = function () {
+//         document.writeln("Модель: " + this.manufact + " " + this.model + "<br>");
+//         document.writeln("Год выпуска: " + this.year + "<br>");
+//         document.writeln("Производитель: " + this.manufact + "<br><br>");
+//     }
 
 
+// }
+
+// let nissan = new Automobile("Nissan", "Skyline", 2007, "Red");
+// let toyota = new Automobile("Toyota", "Corolla", 2009, "Black");
+// let volk = new Automobile("Volkswagen", "Golf", 2009, "Blue");
+
+
+// nissan.whatColor()
+// nissan.autoInfo()
+// toyota.whatColor()
+// toyota.autoInfo()
+// volk.whatColor()
+// volk.autoInfo()
+
+
+
+// let open = document.querySelector("#show");
+// open.addEventListener("click", function () {
+//     // window.open("https://yandex.com")
+//     window.open("str.html", "new_window")
+// });
+
+
+// let cls =
+
+// console.log(window.location)
+// console.log(location.href)
+// console.log(document.location)
+
+// location.href = "https://htmlbook.ru";
+
+
+// let open = document.querySelector("#show");
+// open.addEventListener("click", function () {
+//     window.location.assign("https://htmlbook.ru")
+// })
+
+
+// let btn = document.getElementById("btn");
+// btn.addEventListener("click", () => {
+//     let url = document.getElementById("url").value;
+//     location.replace(url);
+// })
+
+// console.log("В истории " + history.length + " страница")
+
+/* try {
+    //код, где может произойти ошибка 
+} catch (error){
+    //выполнится, если ошибка произошла
+} finally {
+    //выполнится в любом случае
 }
 
-let nissan = new Automobile("Nissan", "Skyline", 2007, "Red");
-let toyota = new Automobile("Toyota", "Corolla", 2009, "Black");
-let volk = new Automobile("Volkswagen", "Golf", 2009, "Blue");
+*/
+
+// let a = 5;
+
+// try {
+//     console.log(b);
+// } catch (error) {
+//     console.error("Ошибка:", error.message);
+// }
+// console.log(a)
 
 
-nissan.whatColor()
-nissan.autoInfo()
-toyota.whatColor()
-toyota.autoInfo()
-volk.whatColor()
-volk.autoInfo()
+// try {
+//     let arr = new Array(-5);
+// } catch (err) {
+//     let text = err.name + "<br>" + err.message + "<br>" + err.stack;
+//     document.getElementById("demo").innerHTML = text;
+// }
+
+// let flag = false;
+// let but = document.querySelector("button");
+
+// but.addEventListener("click", function () {
+//     try {
+//         if (!flag) {
+//             document.body.style.background = "yellow";
+//         } else {
+//             document.body.style.background = "greenyellow";
+//         }
+//     } catch (e) {
+//         alert(e);
+//     } finally {
+//         flag = !flag;
+//     }
+
+// })
+
+
+
+// function divide(a, b) {
+//     if (b == 0) {
+//         throw new Error("Делить на 0 нельзя");
+//     }
+//     return a / b;
+// }
+
+// let res;
+// try {
+//     res = divide(5, 0);
+//     console.log(res)
+// } catch (error) {
+//     console.log(error.name + ": " + error.message + ", stack: " + error.stack);
+// }
+
+// let but = document.querySelector("button");
+// but.addEventListener("click", myFunction);
+
+// function myFunction() {
+//     let message = document.getElementById("txt");
+//     let x = document.getElementById("demo").value;
+//     message.innerHTML = "";
+//     try {
+//         if (x == " ") {
+//             throw "пусто";
+//         } if (isNaN(x)) {
+//             throw 'не число';
+//         }
+//         if (x < 5) {
+//             throw 'слишком мало';
+//         }
+//     } catch (err) {
+//         message.innerHTML = "Вы ввели " + err;
+//     }
+// }
+
+
+// function calculate(a, b) {
+
+//     return a + (b ** 2) / 3;
+
+// }
+
+// console.log(calculate(5, 3));
+// console.log(calculate("Hello", 3));
+
+
+// class Rectangle {
+//     constructor(height, width) {
+//         this.height = height;
+//         this.width = width;
+//     }
+//     area() {
+//         return this.height * this.width;
+//     }
+// }
+// const rectangle = new Rectangle(10, 20);
+// console.log(rectangle.area());
+
+
+class krug {
+    constructor(R) {
+        this.R = R;
+    }
+    Radius() {
+        return 2 * 3.14 * this.R
+    }
+}
+const Krug = new krug(5);
+console.log(Krug.Radius())
+
+
+class treugolnik {
+    constructor(a, b, c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    P() {
+        return this.a + this.b + this.c
+    }
+}
+const Treugolnik = new treugolnik(5, 4, 3);
+console.log(Treugolnik.P())
