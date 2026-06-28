@@ -4585,27 +4585,268 @@ let regexp = /шаблон/флаги;
 // console.log(rectangle.area());
 
 
-class krug {
-    constructor(R) {
-        this.R = R;
-    }
-    Radius() {
-        return 2 * 3.14 * this.R
-    }
-}
-const Krug = new krug(5);
-console.log(Krug.Radius())
+// class krug {
+//     constructor(R) {
+//         this.R = R;
+//     }
+//     Radius() {
+//         return 2 * 3.14 * this.R
+//     }
+// }
+// const Krug = new krug(5);
+// console.log(Krug.Radius())
 
 
-class treugolnik {
-    constructor(a, b, c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+// class treugolnik {
+//     constructor(a, b, c) {
+//         this.a = a;
+//         this.b = b;
+//         this.c = c;
+//     }
+//     P() {
+//         return this.a + this.b + this.c
+//     }
+// }
+// const Treugolnik = new treugolnik(5, 4, 3);
+// console.log(Treugolnik.P())
+
+
+// class User {
+//     constructor(name = 'Гость', role = 'viewer', isActive = false) {
+//         this.name = name;
+//         this.role = role;
+//         this.isActive = isActive;
+//         this.createdAt = new Date();
+//     }
+//     activate() {
+//         this.isActive = true;
+//         return `Пользователь ${this.name} активирован`;
+//     }
+// }
+
+
+// const admin = new User('Админ', 'admin', true);
+// const guest = new User();
+
+// guest.activate();
+
+
+// console.log(admin);
+// console.log(guest);
+
+
+// class Person {
+//     #age;
+//     constructor(name, age) {
+//         this.name = name;
+//         this.#age = age;
+//     }
+//     print() {
+//         console.log(`Name: ${this.name} Age: ${this.#age}`);
+//     }
+// }
+
+// const tom = new Person("Tom", 37);
+// tom.print();
+
+// tom.name = "Sam";
+// tom.print()
+
+
+// class User {
+//     constructor(login) {
+//         this.login = login;
+//     }
+// }
+
+// let user = new User("administrator");
+// console.log(user.login);
+
+
+// class Person {
+//     constructor(firstName, lastName) {
+//         this._firstName = firstName;
+//         this._lastName = lastName;
+//     }
+
+//     get fullName() {
+//         return this._firstName + " " + this._lastName
+//     }
+//     set fullName(value) {
+//         [this._firstName, this._lastName] = value.split(/\s+/)
+//     }
+// }
+
+
+
+// let people = new Person("Сергей", "Михайлов");
+
+// document.writeln(people.fullName)
+// people.fullName = "Анна Петрова";
+// document.writeln(people.fullName)
+
+
+// class Mail {
+//     constructor(sender) {
+//         this._sender = sender;
+//     }
+//     get sender() {
+//         return "Почта: " + this._sender;
+//     }
+//     set sender(val) {
+//         this._sender = val.toLowerCase()
+//     }
+// }
+
+// const m = new Mail("test@mail.ru");
+// m.sender = "MyTest@mail.ru";
+// document.writeln(m.sender);
+
+
+// class treugolnik {
+//     constructor(a, b, c) {
+//         this.a = a;
+//         this.b = b;
+//         this.c = c;
+//     }
+//     P() {
+//         return this.a + this.b + this.c
+//     }
+// }
+// const Treugolnik = new treugolnik(5, 4, 3);
+// console.log(Treugolnik.P())
+
+
+
+
+// class Worker {
+//     constructor(name, surname, rate, days) {
+//         this.name = name;
+//         this.surname = surname;
+//         this.rate = rate;
+//         this.days = days;
+//     }
+//     getSalary() {
+//         return this.rate * this.days;
+//     }
+//     get getFullName() {
+//         return this.name + " " + this.surname;
+//     }
+// }
+
+// const worker = new Worker("Иван", "Иванов", 10, 31)
+
+// console.log(worker.name);
+// console.log(worker.surname);
+// console.log(worker.getFullName);
+// console.log(worker.rate);
+// console.log(worker.days);
+// console.log(worker.getSalary());
+
+// class Boss extends Worker {
+//     hide() {
+//         document.writeln(`${this.name} прячется!<br>`)
+//     }
+// }
+
+
+// // class Animal {
+// //     constructor(name) {
+// //         this.speed = 0;
+// //         this.name = name;
+// //     }
+
+// //     run(speed) {
+// //         this.speed = speed;
+// //         document.writeln(`${this.name} бежать со скоростью ${this.speed} км/ч.`)
+// //     }
+
+// //     stop() {
+// //         this.speed = 0;
+// //         document.writeln(`${this.name} стоит. <br>`);
+// //     }
+// // }
+
+// // class Rabbit extends Animal {
+// //     hide() {
+// //         document.writeln(`${this.name} прячется!<br>`)
+// //     }
+// // }
+
+// // let animal = new Animal("Мой питомец");
+// // animal.run(80);
+// // animal.stop();
+
+// // let rabbit = new Rabbit("Белый кролик");
+// // rabbit.hide();
+
+// class Shape {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     calculateArea() {
+//         throw new Error("Метод calculate должен быть реализован")
+//     }
+
+//     describe() {
+//         console.log(`Это ${this.name} с площадью ${this.calculateArea()} `)
+//     }
+// }
+
+// class Circle extends Shape {
+//     constructor(name, radius) {
+//         super(name);
+//         this.radius = radius;
+//     }
+//     calculateArea() {
+//         return Math.PI * this.radius ** 2;
+//     }
+// }
+
+// const circle = new Circle("Круг", 5);
+
+
+class Worker {
+    constructor(name, surname, rate, days) {
+        this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
     }
-    P() {
-        return this.a + this.b + this.c
+    getSalary() {
+        return this.rate * this.days;
+    }
+    get getFullName() {
+        return this.name + " " + this.surname;
     }
 }
-const Treugolnik = new treugolnik(5, 4, 3);
-console.log(Treugolnik.P())
+
+const worker = new Worker("Иван", "Иванов", 10, 31)
+
+console.log(worker.name);
+console.log(worker.surname);
+console.log(worker.getFullName);
+console.log(worker.rate);
+console.log(worker.days);
+console.log(worker.getSalary());
+
+class Boss extends Worker {
+    constructor(name, surname, rate, days, workers) {
+        super(name, surname, rate, days);
+        this.workers = workers;
+    }
+    getSalary() {
+        return this.rate * this.workers * this.days
+    }
+}
+
+const boss = new Boss("Иван", "Иванов", 10, 31, 10);
+
+console.log(boss.name);
+console.log(boss.surname);
+console.log(boss.getFullName);
+console.log(boss.rate);
+console.log(boss.days);
+console.log(boss.workers);
+console.log(boss.getSalary());
