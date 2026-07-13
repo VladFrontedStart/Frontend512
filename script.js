@@ -4807,46 +4807,360 @@ let regexp = /шаблон/флаги;
 // const circle = new Circle("Круг", 5);
 
 
-class Worker {
-    constructor(name, surname, rate, days) {
-        this.name = name;
-        this.surname = surname;
-        this.rate = rate;
-        this.days = days;
+// class Worker {
+//     constructor(name, surname, rate, days) {
+//         this.name = name;
+//         this.surname = surname;
+//         this.rate = rate;
+//         this.days = days;
+//     }
+//     getSalary() {
+//         return this.rate * this.days;
+//     }
+//     get getFullName() {
+//         return this.name + " " + this.surname;
+//     }
+// }
+
+// const worker = new Worker("Иван", "Иванов", 10, 31)
+
+// console.log(worker.name);
+// console.log(worker.surname);
+// console.log(worker.getFullName);
+// console.log(worker.rate);
+// console.log(worker.days);
+// console.log(worker.getSalary());
+
+// class Boss extends Worker {
+//     constructor(name, surname, rate, days, workers) {
+//         super(name, surname, rate, days);
+//         this.workers = workers;
+//     }
+//     getSalary() {
+//         return this.rate * this.workers * this.days
+//     }
+// }
+
+// const boss = new Boss("Иван", "Иванов", 10, 31, 10);
+
+// console.log(boss.name);
+// console.log(boss.surname);
+// console.log(boss.getFullName);
+// console.log(boss.rate);
+// console.log(boss.days);
+// console.log(boss.workers);
+// console.log(boss.getSalary());
+
+
+// function strjoin(separator, ...parts) {
+//     return parts.join(separator);
+// }
+
+// function strjoin(separator) {
+//     return new Array(parts).slice(1).join(separator)
+// }
+
+// console.log(strjoin('.', 'a', 'b', 'c'))
+// console.log(strjoin('-', 'a', 'b', 'c', 'd', 'e', 'f'))
+
+
+// console.log(this)
+
+
+// class Shape {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     calculateArea() {
+//         throw new Error("Метод calculate должен быть реализован")
+//     }
+
+//     describe() {
+//         console.log(`Это ${this.name} с площадью ${this.calculateArea()} `)
+//     }
+// }
+
+// class Circle extends Shape {
+//     constructor(name, radius) {
+//         super(name);
+//         this.radius = radius;
+//     }
+//     calculateArea() {
+//         return Math.PI * this.radius ** 2;
+//     }
+// }
+
+// class Square extends Shape {
+//     constructor(name, side) {
+//         super(name);
+//         this.side = side;
+//     }
+//     calculateArea() {
+//         return this.side ** 2
+//     }
+// }
+
+// class Triangle extends Shape {
+//     constructor(name, base, height) {
+//         super(name);
+//         this.base = base;
+//         this.height = height;
+
+//     }
+//     calculateArea() {
+//         return this.base * this.height / 2;
+//     }
+// }
+
+// const circle = new Circle("Круг", 5);
+// circle.describe();
+
+
+// const square = new Square("Квадрат", 4);
+// circle.describe();
+
+// square.describe();
+
+// const triangle = new Triangle("Треугольник", 6, 3);
+// triangle.describe();
+
+// const shapes = [
+//     new Circle("Круг", 5),
+//     new Square("Квадрат", 4),
+//     new Triangle("Треугольник", 6, 3)
+// ]
+
+// shapes.forEach(shape => shape.describe());
+
+// class Animal {
+//     static count = 0;
+//     constructor(name) {
+//         this.speed = 0;
+//         this.name = name;
+//         Animal.count++;
+//     }
+//     static counter() {
+//         return Animal.count;
+//     }
+
+//     run(speed) {
+//         this.speed = speed;
+//         document.writeln(`${this.name} бежить со скоростью ${this.speed} км/ч.<br>`);
+//     }
+
+//     stop() {
+//         this.speed = 0;
+//         document.writeln(`${this.name} стоит.<br>`); ``
+//     }
+// }
+
+// let animal1 = new Animal("Мой питомец 1");
+// let animal2 = new Animal("Мой питомец 2");
+// console.log(Animal.count);
+
+
+// console.log(Animal.counter());
+
+
+// class User {
+//     static takenNames = [];
+//     static isNameTaken(name) {
+//         return User.takenNames.includes(name);
+//     }
+
+//     constructor(name) {
+//         this.name = name;
+//         User.takenNames.push(name);
+//     }
+// }
+
+// const user1 = new User("Сергей");
+// const user2 = new User("Марина");
+// console.log(User.takenNames);
+// console.log(User.isNameTaken("Сергей"));
+
+
+// class MathUtils {
+//     static PI = 3.141592653589793;
+
+//     static sum(...number) {
+//         return number.reduce((total, num) => total + num, 0);
+//     }
+
+//     static average(...number) {
+//         return MathUtils.sum(...number) / number.length;
+//     }
+// }
+
+// console.log(MathUtils.PI);
+// console.log(MathUtils.sum(1, 2, 3, 4));
+// console.log(MathUtils.average(1, 2, 3, 4));
+
+
+/*
+let total = 0;
+let num = 1;
+
+*/
+
+
+// class Task {
+//     constructor(title = Task.getDefaultTitle()) {
+//         this.title = title;
+//         this.done = false;
+
+//         console.log("Происходит создание задачи");
+//     }
+//     static getDefaultTitle() {
+//         return "Задача";
+//     }
+//     get done() {
+//         return this._done === true ? "Задача выполнена" : "Задача не выполнена"
+//     }
+
+//     set done(value) {
+//         if (value !== undefined && typeof value == 'boolean') {
+//             this._done = value;
+//         } else {
+//             console.error("Ошибка! Укажите значение true или false")
+//         }
+//     }
+
+//     complete() {
+//         this.done = true;
+//         console.log(`Задача ${this.title} выполнена`)
+
+//     }
+// }
+// Task.count = 0;
+
+// let task = new Task("Выучить Javascript");
+// let task2 = new Task("Выучить frameworks");
+// let task3 = new Task();
+
+// console.log(task.title);
+// console.log(task3.title);
+
+// console.log("Созданных задач: " + Task.count);
+// task2.complete();
+
+
+// console.log(task.done);
+// console.log(task2.done);
+
+class Header {
+    constructor(image, h1) {
+        this.src = image;
+        this.h1 = h1
     }
-    getSalary() {
-        return this.rate * this.days;
+
+    render(id) {
+        let out = `<img src="${this.src}" alt="Изображение">
+        <h1>${this.h1}</h1>`;
+        document.querySelector(`#${id}`).innerHTML = out;
     }
-    get getFullName() {
-        return this.name + " " + this.surname;
-    }
+
+
 }
 
-const worker = new Worker("Иван", "Иванов", 10, 31)
 
-console.log(worker.name);
-console.log(worker.surname);
-console.log(worker.getFullName);
-console.log(worker.rate);
-console.log(worker.days);
-console.log(worker.getSalary());
+let img = "https://images.icon-icons.com/2107/PNG/96/file_type_js_official_icon_130509.png"
+let header1 = new Header(img, "Работа 24 часа в сутки, 7 дней в неделю, 365 дней в году",);
+header1.render("header");
 
-class Boss extends Worker {
-    constructor(name, surname, rate, days, workers) {
-        super(name, surname, rate, days);
-        this.workers = workers;
-    }
-    getSalary() {
-        return this.rate * this.workers * this.days
-    }
-}
+let img2 = "https://images.icon-icons.com/1822/PNG/96/js_115529.png";
+let header2 = new Header(img2, "Нет географических границ")
+header2.render("header2")
 
-const boss = new Boss("Иван", "Иванов", 10, 31, 10);
+let img3 = "https://images.icon-icons.com/2667/PNG/96/folder_node_js_icon_161287.png";
+let header3 = new Header(img3, "Ассортимент");
+header3.render("header3");
 
-console.log(boss.name);
-console.log(boss.surname);
-console.log(boss.getFullName);
-console.log(boss.rate);
-console.log(boss.days);
-console.log(boss.workers);
-console.log(boss.getSalary());
+let img4 = "https://images.icon-icons.com/510/PNG/512/game-controller-b_icon-icons.com_50382.png";
+let header4 = new Header(img4, "Безопасность");
+header4.render("header4");
+
+let img5 = "https://images.icon-icons.com/928/PNG/512/a-b-testing_icon-icons.com_72217.png";
+let header5 = new Header(img5, "Сокращение расходов");
+header5.render("header5");
+
+let img6 = "https://images.icon-icons.com/17/PNG/256/b_2020.png";
+let header6 = new Header(img6, "Партнерские отношения");
+header6.render("header6");
+
+let img7 = "https://images.icon-icons.com/907/PNG/512/group-of-people-in-a-formation_icon-icons.com_70476.png";
+let header7 = new Header(img7, "Покупатель всегда на связи");
+header7.render("header7");
+
+let img8 = "https://images.icon-icons.com/631/PNG/512/one-finger-tap-outlined-symbol-of-a-hand_icon-icons.com_57978.png";
+let header8 = new Header(img8, "Комфортный выбор");
+header8.render("header8");
+
+
+let img9 = "https://images.icon-icons.com/1130/PNG/512/rightarrowinacircle_80109.png";
+let header9 = new Header(img9, "Удобство оплаты");
+header9.render("header9");
+
+
+
+
+
+
+
+
+// function abbrevName(name) {
+
+//     const [firstName, lastName] = name.split(" ");
+
+//     return `${firstName[0]}.${lastName[0]}.`;
+
+
+// }
+
+// console.log(abbrevName("Привет Как"))
+
+
+// function maskify(cc) {
+//     let number = cc;
+//     let mask;
+//     let maskNumber;
+//     if (number.length <= 4) {
+//         return number;
+//     } else {
+//         mask = number.slice(-4);
+//         maskNumber = mask.padStart(cc.length, "#");
+
+//     }
+//     return maskNumber;
+// }
+
+// console.log(maskify("854938054358"))
+
+// function calculateCentury(year) {
+//     return Math.ceil(year / 100);
+
+// }
+
+// console.log(calculateCentury(2024))
+
+
+// function reverseString(string) {
+//     let result = string.split("").reverse().join("");
+//     return result;
+// }
+
+// console.log(reverseString("maxcode.dev"));
+
+
+// function twoMaxNumbers(numbers) {
+// return numbers.reduce(([a,b], x)=>
+// {
+//     if(x>a) return [x,a];
+//     if (x>b && x !==a) return [a,x];
+//     return [a,b];
+// },  [-Infinity, -Infinity]);
+// }
+
+// const numbers1 = [8, 5, 6, 6, 10, 3, 19, 19, 10, 19, 7];
+// console.log(twoMaxNumbers(numbers1)); // [19, 10];

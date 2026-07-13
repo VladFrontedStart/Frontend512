@@ -1,16 +1,21 @@
-.box {
-    box-sizing: border-box;
-    width: 400px;
-    height: 350px;
-    overflow: scroll;
-    margin: 50px auto 20px;
-    border: 1px solid gray;
-    padding: 10px;
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 20px;
+
 }
 
-button {
-    width: 100px;
-    height: 40px;
-    margin: 20px auto;
-    display: block;
+div {
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: center;
+    min-height: 120px;
+}
+
+div img {
+    width: 64px;
 }
