@@ -5049,58 +5049,58 @@ let num = 1;
 // console.log(task.done);
 // console.log(task2.done);
 
-class Header {
-    constructor(image, h1) {
-        this.src = image;
-        this.h1 = h1
-    }
+// class Header {
+//     constructor(image, h1) {
+//         this.src = image;
+//         this.h1 = h1
+//     }
 
-    render(id) {
-        let out = `<img src="${this.src}" alt="Изображение">
-        <h1>${this.h1}</h1>`;
-        document.querySelector(`#${id}`).innerHTML = out;
-    }
-
-
-}
+//     render(id) {
+//         let out = `<img src="${this.src}" alt="Изображение">
+//         <h1>${this.h1}</h1>`;
+//         document.querySelector(`#${id}`).innerHTML = out;
+//     }
 
 
-let img = "https://images.icon-icons.com/2107/PNG/96/file_type_js_official_icon_130509.png"
-let header1 = new Header(img, "Работа 24 часа в сутки, 7 дней в неделю, 365 дней в году",);
-header1.render("header");
-
-let img2 = "https://images.icon-icons.com/1822/PNG/96/js_115529.png";
-let header2 = new Header(img2, "Нет географических границ")
-header2.render("header2")
-
-let img3 = "https://images.icon-icons.com/2667/PNG/96/folder_node_js_icon_161287.png";
-let header3 = new Header(img3, "Ассортимент");
-header3.render("header3");
-
-let img4 = "https://images.icon-icons.com/510/PNG/512/game-controller-b_icon-icons.com_50382.png";
-let header4 = new Header(img4, "Безопасность");
-header4.render("header4");
-
-let img5 = "https://images.icon-icons.com/928/PNG/512/a-b-testing_icon-icons.com_72217.png";
-let header5 = new Header(img5, "Сокращение расходов");
-header5.render("header5");
-
-let img6 = "https://images.icon-icons.com/17/PNG/256/b_2020.png";
-let header6 = new Header(img6, "Партнерские отношения");
-header6.render("header6");
-
-let img7 = "https://images.icon-icons.com/907/PNG/512/group-of-people-in-a-formation_icon-icons.com_70476.png";
-let header7 = new Header(img7, "Покупатель всегда на связи");
-header7.render("header7");
-
-let img8 = "https://images.icon-icons.com/631/PNG/512/one-finger-tap-outlined-symbol-of-a-hand_icon-icons.com_57978.png";
-let header8 = new Header(img8, "Комфортный выбор");
-header8.render("header8");
+// }
 
 
-let img9 = "https://images.icon-icons.com/1130/PNG/512/rightarrowinacircle_80109.png";
-let header9 = new Header(img9, "Удобство оплаты");
-header9.render("header9");
+// let img = "https://images.icon-icons.com/2107/PNG/96/file_type_js_official_icon_130509.png"
+// let header1 = new Header(img, "Работа 24 часа в сутки, 7 дней в неделю, 365 дней в году",);
+// header1.render("header");
+
+// let img2 = "https://images.icon-icons.com/1822/PNG/96/js_115529.png";
+// let header2 = new Header(img2, "Нет географических границ")
+// header2.render("header2")
+
+// let img3 = "https://images.icon-icons.com/2667/PNG/96/folder_node_js_icon_161287.png";
+// let header3 = new Header(img3, "Ассортимент");
+// header3.render("header3");
+
+// let img4 = "https://images.icon-icons.com/510/PNG/512/game-controller-b_icon-icons.com_50382.png";
+// let header4 = new Header(img4, "Безопасность");
+// header4.render("header4");
+
+// let img5 = "https://images.icon-icons.com/928/PNG/512/a-b-testing_icon-icons.com_72217.png";
+// let header5 = new Header(img5, "Сокращение расходов");
+// header5.render("header5");
+
+// let img6 = "https://images.icon-icons.com/17/PNG/256/b_2020.png";
+// let header6 = new Header(img6, "Партнерские отношения");
+// header6.render("header6");
+
+// let img7 = "https://images.icon-icons.com/907/PNG/512/group-of-people-in-a-formation_icon-icons.com_70476.png";
+// let header7 = new Header(img7, "Покупатель всегда на связи");
+// header7.render("header7");
+
+// let img8 = "https://images.icon-icons.com/631/PNG/512/one-finger-tap-outlined-symbol-of-a-hand_icon-icons.com_57978.png";
+// let header8 = new Header(img8, "Комфортный выбор");
+// header8.render("header8");
+
+
+// let img9 = "https://images.icon-icons.com/1130/PNG/512/rightarrowinacircle_80109.png";
+// let header9 = new Header(img9, "Удобство оплаты");
+// header9.render("header9");
 
 
 
@@ -5164,3 +5164,39 @@ header9.render("header9");
 
 // const numbers1 = [8, 5, 6, 6, 10, 3, 19, 19, 10, 19, 7];
 // console.log(twoMaxNumbers(numbers1)); // [19, 10];
+
+
+
+let canvas = document.getElementById('Canvas');
+let ctx = canvas.getContext('2d');
+
+
+let centerX = canvas.width / 2;
+let centerY = canvas.height / 2;
+
+
+ctx.beginPath();
+ctx.arc(centerX, centerY, 100, 0, Math.PI * 2);
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.arc(centerX - 35, centerY - 20, 10, 0, Math.PI * 2);
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.arc(centerX + 35, centerY - 20, 10, 0, Math.PI * 2);
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(centerX, centerY + 10, 60, 0.2 * Math.PI, 0.8 * Math.PI);
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;
+ctx.stroke();
